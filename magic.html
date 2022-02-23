@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="menu">
+            <div id="nav">
+                <ul>
+                    <li> <a href="index.html"> Quote-Box </a></li>
+                    <li> <a href="heroConverter.html">Hero-Converter</a></li>
+                    <li> <a href="part2.html">Part-2</a> </li>
+                    <li><a href="magic.html">Part-3</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="container-home">
+
+            <div id="centerMagic">
+
+                <div id="magicBox">
+                    <div class="boxHeader">
+                        <p>Magic!!</p>
+                    </div>
+
+                    <div class="textBox"><textarea id="textBox" name="w3review" rows="4" cols="50"></textarea></div>
+
+                    <div class="boxFooter">
+                        <button class="btn" id="btn1" onclick="clearall()">Clear-It</button>
+                        <button class="btn" id="btn2" onclick="capitalize()">Capitalize</button>
+                        <button class="btn" id="btn3" onclick="textSort()">Sort</button>
+                        <button class="btn" id="btn4" onclick="textReverse()">Reverse</button>
+                        <button class="btn" id="btn5" onclick="StripBlank()">Strip-Blank</button>
+                        <button class="btn" id="btn6" onclick="AddNumbers()">Add-Numbers</button>
+                        <button class="btn" id="btn7" onclick="lineShuffle()">Shuffle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 150px;"></div>
+        <div id="footer"></div>
+    </div>
+
+
+    <script>
+
+        function clearall() {
+            document.getElementById("textBox").value = "";
+        }
+
+        // ------------------------------------------------------------------------------
+
+        function capitalize() {
+            var element = document.getElementById("btn2").innerText;
+
+            if (element == "Capitalize") {
+                var str = document.getElementById("textBox").value;
+                var ucase = str.toUpperCase();
+                document.getElementById("textBox").value = ucase;
+                document.querySelector("#btn2").innerText = "LowerCase";
+
+            } else {
+                var str = document.getElementById("textBox").value;
+                var lcase = str.toLowerCase();
+                document.getElementById("textBox").value = lcase;
+                document.querySelector("#btn2").innerText = "Capitalize";
+            }
+        }
+        // ----------------------------------------------------------------------------
+        function textSort() {
+
+            var str = document.getElementById("textBox").value;
+            var lines = str.split("\n");
+            for (var i = 0; i < lines.length; i++) {
+                var word = lines[i].split(" ");
+
+                wordArray = word.sort();
+
+                var a = wordArray[0];
+                for (var c = 1; c < wordArray.length; c++) {
+                    a = a + " " + wordArray[c];
+                }
+                lines[i] = a;
+
+            }
+            lines.sort();
+            var newStr = lines[0];
+            for (var i = 1; i < lines.length; i++) {
+                var fst_element = lines[0].slice(0);
+                if (fst_element == " ") {
+                    lines[i] = m_Values.slice(1);
+                }
+                newStr = newStr + "\n" + lines[i];
+            }
+            document.getElementById("textBox").value = newStr;
+
+        }
+        // ------------------------------------------------------------------------------
+
+        function textReverse() {
+
+            var str = document.getElementById("textBox").value;
+            var lines = str.split("\n");
+
+            for (var i = 0; i < lines.length; i++) {
+                var allChar = lines[i].split('');
+
+                lines[i] = allChar.reverse().join('');
+            }
+
+            var newStr = lines[0];
+            for (var i = 1; i < lines.length; i++) {
+                var fst_element = lines[0].slice(0);
+                if (fst_element == " ") {
+                    lines[i] = m_Values.slice(1);
+                }
+                newStr = newStr + "\n" + lines[i];
+            }
+            document.getElementById("textBox").value = newStr;
+        }
+        // ------------------------------------------------------------------------------
+
+        function StripBlank() {
+
+            var str = document.getElementById("textBox").value;
+            var lines = str.split("\n");
+
+            for (var i = 0; i < lines.length; i++) {
+
+                lines[i] = lines[i].trim();
+
+                var index = lines.indexOf('');
+
+                if (index > 0) {
+                    lines.splice(index, 1);
+                    i--;
+                }
+
+            }
+
+            var newStr = lines[0];
+            for (var i = 1; i < lines.length; i++) {
+                var fst_element = lines[0].slice(0);
+                if (fst_element == " ") {
+                    lines[i] = m_Values.slice(1);
+                }
+                newStr = newStr + "\n" + lines[i];
+            }
+            document.getElementById("textBox").value = newStr;
+
+
+        }
+
+        // -----------------------------------------------------------
+        function AddNumbers() {
+
+            var str = document.getElementById("textBox").value;
+            var lines = str.split("\n");
+
+            for (var i = 0; i < lines.length; i++) {
+
+                lines[i] = lines[i].trim();
+
+                lines[i] = (i + 1) + ". " + lines[i]
+            }
+
+            var newStr = lines[0];
+            for (var i = 1; i < lines.length; i++) {
+                var fst_element = lines[0].slice(0);
+                if (fst_element == " ") {
+                    lines[i] = m_Values.slice(1);
+                }
+                newStr = newStr + "\n" + lines[i];
+            }
+            document.getElementById("textBox").value = newStr;
+
+        }
+
+        // -----------------------------------------------------------
+
+        function lineShuffle() {
+
+            var str = document.getElementById("textBox").value;
+            var lines = str.split("\n");
+
+            for (var i = 0; i < lines.length; i++) {
+                lines[i] = lines[i].trim();
+            }
+
+
+
+            let r = Math.floor((Math.random() * lines.length));
+
+            var newStr = lines[r];
+            var dublicateChk = "" + r;
+
+            for (var i = 1; i < lines.length; i++) {
+
+                let x = Math.floor((Math.random() * lines.length));
+
+                var check = dublicateChk.indexOf(x);
+
+                if (check == -1) {
+                    newStr = newStr + "\n" + lines[x];
+                    dublicateChk = dublicateChk + x;
+                }else{
+                    i--;
+                }
+            }
+            document.getElementById("textBox").value = newStr;
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

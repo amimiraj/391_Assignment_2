@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="menu">
+            <div id="nav">
+                <ul>
+                    <li> <a href="index.html"> Quote-Box </a></li>
+                    <li> <a href="heroConverter.html">Hero-Converter</a></li>
+                    <li> <a href="part2.html">Part-2</a> </li>
+                    <li><a href="magic.html">Part-3</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="container-home">
+
+            <div id="iteamCenter">
+
+                <div  class="one_line fix" ><div  id="quote"></div></div>
+                    
+
+                    <div class="one_line" id="tablediv">
+                        <table id="table1">
+                            <tr>
+                                <td> <input
+                                        onclick='changeColor("color1","#03256C","3px solid #03256C","Arial Narrow","220%");'
+                                        type="button" id="color1" class="button" value="1"
+                                        style="background-color: #CEE5D0;"></td>
+                                <td> <input
+                                        onclick='changeColor("color4","#F9F9F9","3px solid #F05454","Trebuchet MS","200%");'
+                                        type="button" id="color4" class="button" value="2"
+                                        style="background-color: #222831; color: aliceblue;"></td>
+                            </tr>
+                            <tr>
+                                <td> <input
+                                        onclick='changeColor("color2","#5E454B","3px solid #5E454B","Franklin Gothic Medium","240%");'
+                                        type="button" id="color2" class="button" value="3"
+                                        style="background-color: #F3F0D7;"></td>
+                                <td> <input
+                                        onclick='changeColor("color3","#2D4263","3px solid #2D4263","Gill Sans","270%");'
+                                        type="button" id="color3" class="button" value="4"
+                                        style="background-color: #78C4D4;"></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                
+            </div>
+
+        </div>
+
+
+
+        <script>
+
+            // function quoteGenerator(){
+
+            var quotes = [
+                "An investment in knowledge pays the best interest",
+                "Get busy living or get busy dying",
+                "The purpose of our lives is to be happy",
+                "You only live once, but if you do it right, once is enough",
+                "If you want to live a happy life, tie it to a goal, not to people or things",
+                "Never let the fear of striking out keep you from playing the game"
+            ];
+
+            let x = Math.floor((Math.random() * quotes.length));
+            document.querySelector("#quote").innerText = quotes[x];
+
+            // }
+
+
+
+
+
+            function changeColor(id, fontColor, borderColor, fontfamily, fontsize) {
+
+                var element = document.querySelector("#" + id).style.backgroundColor;
+
+                document.querySelector("#quote").style.backgroundColor = element;
+                document.querySelector("#quote").style.color = fontColor;
+                document.querySelector(".fix").style.border = borderColor;
+                document.querySelector("#quote").style.fontFamily = fontfamily;
+                document.querySelector("#quote").style.fontSize = fontsize;
+
+            }
+
+        </script>
+
+
+
+
+
+        <div id="footer"> </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

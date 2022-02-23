@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="menu">
+            <div id="nav">
+                <ul>
+                    <li> <a href="index.html"> Quote-Box </a></li>
+                    <li> <a href="heroConverter.html">Hero-Converter</a></li>
+                    <li> <a href="part2.html">Part-2</a> </li>
+                    <li><a href="magic.html">Part-3</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="container-home">
+
+            <div id="centerIteam">
+
+                <div id="part2">
+                    <div class="part2block" id="part2block1">Input Series of Number</div>
+
+                    <div class="part2block" id="part2block2">
+                        <input type="text" name="part2" id="multipleValues" onchange="multipleValues()" oninput="multipleValues()">
+                    </div>
+                </div>
+
+                <div id="maxMinValue">
+                    <table id="table2">
+                        <tr>
+                            <td>MAX</td>
+                            <td>:</td>
+                            <td id="max"></td>
+                        </tr>
+                        <tr>
+                            <td>MIN</td>
+                            <td>:</td>
+                            <td id="min"></td>
+                        </tr>
+                        <tr>
+                            <td>SUM</td>
+                            <td>:</td>
+                            <td id="sum"></td>
+                        </tr>
+                        <tr>
+                            <td>AVERAGE</td>
+                            <td>:</td>
+                            <td id="avg"></td>
+                        </tr>
+                        <tr>
+                            <td>REVERSE ORDER</td>
+                            <td>:</td>
+                            <td id="rev"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div style="margin-top: 150px;"   ></div>
+        <div id="footer"></div>
+    </div>
+
+<script>
+
+function multipleValues() {
+
+    var m_Values=document.getElementById("multipleValues").value;
+
+
+    var lst_element=m_Values.slice(-1);
+
+    console.log(lst_element);
+
+    if (lst_element==",") {
+        var m_Values = m_Values.slice(0, -1);
+    }
+
+    var array=m_Values.split(",").map(Number);
+
+
+
+    var max =Math.max(...array);
+    var min =Math.min(...array);
+
+
+
+     document.getElementById("max").innerHTML = max;
+     document.getElementById("min").innerHTML = min;
+     document.getElementById("sum").innerHTML = array.reduce(getSum);
+     document.getElementById("avg").innerHTML = (array.reduce(getSum)/array.length).toFixed(4);
+     document.getElementById("rev").innerHTML = array.reverse();
+
+
+}
+
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

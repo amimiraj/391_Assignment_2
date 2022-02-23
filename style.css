@@ -1,0 +1,264 @@
+body{
+    margin: auto 0%;
+    color: black;
+}
+
+#wrapper{
+    width:100%;
+}
+
+#menu{
+    background-color:#E8F6EF;;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 0.3%;
+    z-index: 200;
+}
+
+#nav{
+    width:auto;
+}
+
+#menu ul{
+  padding: 0px;
+  margin: 0px 0px 0px 30%;
+ }
+ 
+ 
+#menu ul li {
+ list-style: none;
+ float: left;
+ text-align: center;
+ padding-top: 14px;
+ margin-right: 3px;
+ transition:0s;
+ margin-right: 26px;
+ position: relative;
+}
+
+#menu ul  li a {
+text-decoration: none;
+font-size: 20px;
+color: black;
+
+}
+
+#menu ul li:hover a{
+    text-decoration: underline;
+    color: #00917C;
+    transition:0s;
+}
+    
+#container{ 
+    width: 100%;
+}
+
+#container-home{
+    width: 100%;
+    height: 530px;
+}
+
+#iteamCenter{
+    margin: 17% auto;
+    width: 80%;
+    height: 125px;
+}
+.one_line{
+float: left;
+display: flex;
+text-align: center;
+
+}
+.fix{
+    width: 80%;
+    border: 5px solid black;
+    text-align: center;
+    height: 90px;
+}
+
+#iteamCenter div{
+    float: left;
+}
+#quote{
+    font-size: 180%;
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+}
+
+#tablediv{
+    width: 12%;
+}
+
+#table1 {
+ width: 7%;
+}
+
+table tr td{
+    border: 0.5px solid black;   
+}
+
+.button {
+    width: 48px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+#iteamCenterConverter{
+    margin: 16% auto;
+    width: 70%;
+    height: 70px;
+    border: #F0A500;
+}
+
+#Converter{
+    width: 100%;
+    border: 3px solid black;
+    height: 70px;
+    padding-top: 4px;
+    /* background-color: #E8F6EF; */
+}
+.iblock{
+ float: left;
+ display: inline-flex;
+ 
+}
+
+#div1{
+    width: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#div2{ 
+    width: 25%;
+    }
+
+#div2 input{ 
+    width: 90%;
+    margin: 5% 0% 0px 5%;
+    padding: 2px;
+    height: 25px;
+ }
+
+#div3{
+    width: 10%;
+    margin: 1.35%;
+}
+#select_value {
+    width: 100%;
+    height: 30px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#div5{
+    margin-top: 5px;
+}
+#div5 p{
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+span{
+    font-size: 18px;
+    color: #141E27;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+
+#centerIteam{
+    margin: 150px 0px 0px 33%;
+}
+.part2block{
+    float: left; 
+    display: block;
+    margin: 10px;
+}
+#part2{
+    display: inline-block;
+}
+
+#maxMinValue{
+    margin-top: 20px;
+    margin-left: 10px;
+    /* margin-bottom: 730px; */
+
+}
+
+#table2{
+    width: 322px;
+}
+#table2 tr td{
+    height: 30px;
+    border: none;
+}
+/* ------------------------------------------------------------------------------------- */
+
+#centerMagic{
+height: 700px;
+}
+
+#magicBox{
+ margin: 150px auto;
+ border: 2px solid black;
+ background-color: #085E7D;
+ width: 50%;
+ height: 400px;
+}
+
+.boxHeader{
+height: 50px;
+
+}
+
+.boxHeader p{
+    margin: 5px;
+    color: white;
+    font-size: 25px;
+ }
+
+
+#textBox{
+    height: 289px;
+    width: 99%;
+    margin-left: 1px;
+    font-size: 20px;
+}
+
+.boxFooter{
+ text-align: center;
+height: 32px;
+margin-top: 6px;
+}
+.btn{
+    width: 12%;
+   height: 31px;
+}
+
+#color-plate{
+    border: 1px solid black;
+}
+
+
+
+#footer{
+    background-color:#E8F6EF;
+    width: 100%;
+    height: 55px;
+    margin-bottom: .3%;
+
+}

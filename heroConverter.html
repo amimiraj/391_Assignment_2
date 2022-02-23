@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+
+<body>
+        
+    <div id="wrapper">
+               
+        <div id="menu">  
+            <div id="nav">
+                <ul>
+                    <li> <a href="index.html"> Quote-Box </a></li>
+                    <li> <a href="heroConverter.html">Hero-Converter</a></li>
+                    <li> <a href="part2.html">Part-2</a> </li>   
+                    <li><a href="magic.html">Part-3</a></li>
+                                          
+                </ul>
+            </div>        
+        </div>
+           
+        
+        <div id="container-home">            
+            <div id="iteamCenterConverter">
+
+                <div id="Converter">
+                    <div class="iblock" id="div1">Converter</div>
+                    <div class="iblock" id="div2"><input id="input" type="number"  oninput="weightConverter()" onchange="weightConverter()"></div>
+
+                    <div class="iblock" id="div3">
+                        <select name="covert_to" id="select_value" onchange="weightConverter()" oninput="weightConverter()">
+                            <option value="1">lb to kg</option>
+                            <option value="2">kg to lb</option>
+                        </select>
+                    </div>
+                    <div class="iblock" id="div5"><p>output:</p><span id="output"></span></div>
+                </div>   
+                
+            </div> 
+        </div>
+
+
+
+        <script>
+            
+            function weightConverter() {
+
+               var element= document.getElementById("select_value").value;
+               var valNum=document.getElementById("input").value;
+
+
+                if (element==1) {
+                    var a=(valNum*0.4536).toFixed(4);
+                    document.getElementById("output").innerHTML=(a)+" Kilograms";                 
+                }else{
+                    var a=(valNum*2.2046).toFixed(4);
+                    document.getElementById("output").innerHTML=(a)+" Pounds";
+                }
+             
+            }
+
+        </script>
+
+
+        
+        <div id="footer">  </div>
+    </div>
+</body>
+</html>
